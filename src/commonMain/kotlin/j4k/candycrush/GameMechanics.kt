@@ -15,6 +15,9 @@ class GameMechanics(val field: GameField) {
      * Swaps the two tiles on the given positions.
      */
     fun swapTiles(a: Position, b: Position) {
+        val temp = field[a]
+        field[a] = field[b]
+        field[b] = temp
         // TODO: Step 3.1 Implement swapping of tiles
     }
 
