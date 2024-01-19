@@ -61,7 +61,7 @@ enum class Tile {
          * @return the tile with the given short name
          */
         fun getTile(shortName: String): Tile {
-            // TODO: Step 1.3 Return the tile with the given short name
+            return requireNotNull(toTile[shortName]) { "Tile with short name ($shortName) not found" }
             return A
         }
 
