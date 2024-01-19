@@ -25,6 +25,7 @@ class GameMechanics(val field: GameField) {
      * Remove a field by setting a [Tile.Hole].
      */
     fun removeTile(position: Position) {
+        field[position] = Tile.Hole
         // TODO: Step 3.2 Implement remove tile
     }
 
