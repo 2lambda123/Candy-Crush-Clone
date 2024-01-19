@@ -64,6 +64,10 @@ class GameMechanics(val field: GameField) {
 
     /**
      * Returns `true` if the [Tile] on this position is connected with two (or more) other tiles of the same type.
+fun getVerticalSurroundings(cell: TileCell): List<TileCell> {
+    // TODO: Step 4.2 Implement get vertical surroundings
+    return emptyList()
+}
      */
     fun isInRowWithThree(pos: Position): Boolean {
         return isHorizontalConnected(pos) || isVerticalConnected(pos)
