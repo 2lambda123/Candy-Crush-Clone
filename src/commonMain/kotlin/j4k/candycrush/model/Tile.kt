@@ -30,7 +30,7 @@ enum class Tile {
      * Otherwise `false` ([Tile.Hole], [Tile.OutOfSpace], [Tile.Wall]).
      */
     fun isTile(): Boolean {
-        // TODO: Step 1.1 Check if tile is A-E
+        return this in setOf(Tile.A, Tile.B, Tile.C, Tile.D, Tile.E)
         return false
     }
 
