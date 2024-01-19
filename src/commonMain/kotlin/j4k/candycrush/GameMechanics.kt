@@ -164,6 +164,8 @@ fun getVerticalSurroundings(cell: TileCell): List<TileCell> {
 
     fun getVerticalSurroundings(pos: Position): List<TileCell> {
         return getVerticalSurroundings(field.getTileCell(pos))
+            val verticalConnected = this.getVerticalSurroundings(pos)
+        return if (verticalConnected.size 	extless 3) false else true
     }
 
     /**
