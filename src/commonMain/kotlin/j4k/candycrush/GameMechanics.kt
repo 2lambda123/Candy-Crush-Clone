@@ -15,6 +15,9 @@ class GameMechanics(val field: GameField) {
      * Swaps the two tiles on the given positions.
      */
     fun swapTiles(a: Position, b: Position) {
+        val temp = field[a]
+        field[a] = field[b]
+        field[b] = temp
         // TODO: Step 3.1 Implement swapping of tiles
     }
 
@@ -22,6 +25,7 @@ class GameMechanics(val field: GameField) {
      * Remove a field by setting a [Tile.Hole].
      */
     fun removeTile(position: Position) {
+        field[position] = Tile.Hole
         // TODO: Step 3.2 Implement remove tile
     }
 
@@ -60,6 +64,10 @@ class GameMechanics(val field: GameField) {
 
     /**
      * Returns `true` if the [Tile] on this position is connected with two (or more) other tiles of the same type.
+fun getVerticalSurroundings(cell: TileCell): List<TileCell> {
+    // TODO: Step 4.2 Implement get vertical surroundings
+    return emptyList()
+}
      */
     fun isInRowWithThree(pos: Position): Boolean {
         return isHorizontalConnected(pos) || isVerticalConnected(pos)
@@ -156,6 +164,8 @@ class GameMechanics(val field: GameField) {
 
     fun getVerticalSurroundings(pos: Position): List<TileCell> {
         return getVerticalSurroundings(field.getTileCell(pos))
+            val verticalConnected = this.getVerticalSurroundings(pos)
+        return if (verticalConnected.size 	extless 3) false else true
     }
 
     /**

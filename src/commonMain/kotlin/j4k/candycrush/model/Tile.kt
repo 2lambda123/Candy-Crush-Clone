@@ -30,7 +30,7 @@ enum class Tile {
      * Otherwise `false` ([Tile.Hole], [Tile.OutOfSpace], [Tile.Wall]).
      */
     fun isTile(): Boolean {
-        // TODO: Step 1.1 Check if tile is A-E
+        return this in setOf(Tile.A, Tile.B, Tile.C, Tile.D, Tile.E)
         return false
     }
 
@@ -38,7 +38,8 @@ enum class Tile {
      * @return First letter uppercase of this tile
      */
     fun shortName(): String {
-        // TODO: Step 1.2 Return first letter uppercase of this tile
+        // Implement the logic to return the first letter uppercase of the tile in the shortName function
+        return this.name.substring(0, 1)
         return ""
     }
 
@@ -60,7 +61,7 @@ enum class Tile {
          * @return the tile with the given short name
          */
         fun getTile(shortName: String): Tile {
-            // TODO: Step 1.3 Return the tile with the given short name
+            return requireNotNull(toTile[shortName]) { "Tile with short name ($shortName) not found" }
             return A
         }
 

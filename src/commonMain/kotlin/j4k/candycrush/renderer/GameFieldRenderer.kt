@@ -98,7 +98,7 @@ class GameFieldRenderer(
     }
 
     init {
-        updateImagesFromField()
+        updateImagesFromFieldAndReset()
     }
 
     fun updateImagesFromField() {
