@@ -38,7 +38,8 @@ enum class Tile {
      * @return First letter uppercase of this tile
      */
     fun shortName(): String {
-        // TODO: Step 1.2 Return first letter uppercase of this tile
+        // Implement the logic to return the first letter uppercase of the tile in the shortName function
+        return this.name.substring(0, 1)
         return ""
     }
 
